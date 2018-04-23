@@ -5,52 +5,54 @@ import {
   View,
   ColorPropType,
   requireNativeComponent,
+  ViewPropTypes
 } from 'react-native';
+import PropTypes from 'prop-types'
 
 
 class WheelCurvedPicker extends Component{
   static propTypes = {
-    ...View.propTypes,
+    ...ViewPropTypes,
 
-    data: React.PropTypes.array,
+    data: PropTypes.array,
 
-    selectedIndex: React.PropTypes.number,
+    selectedIndex: PropTypes.number,
 
     selectTextColor: ColorPropType,
 
-    itemStyle: React.PropTypes.object, //textColor  textSize
+    itemStyle: PropTypes.object, //textColor  textSize
 
-    textSize: React.PropTypes.number,
+    textSize: PropTypes.number,
     textColor: ColorPropType,
 
     // 设置滚轮选择器指示器样式
-    indicatorStyle: React.PropTypes.object, //indicatorColor  indicatorSize
+    indicatorStyle: PropTypes.object, //indicatorColor  indicatorSize
 
-    indicatorSize: React.PropTypes.number,
+    indicatorSize: PropTypes.number,
     indicatorColor: ColorPropType,
 
     // 设置滚轮选择器是否显示指示器
-    indicator: React.PropTypes.bool,
+    indicator: PropTypes.bool,
 
     // 设置滚轮选择器是否显示幕布
-    curtain: React.PropTypes.bool,
+    curtain: PropTypes.bool,
     // 设置滚轮选择器幕布颜色
     curtainColor: ColorPropType,
 
     // 设置滚轮选择器是否有空气感
-    atmospheric: React.PropTypes.bool,
+    atmospheric: PropTypes.bool,
 
     // 滚轮选择器是否开启卷曲效果
-    curved: React.PropTypes.bool,
+    curved: PropTypes.bool,
 
     // 设置滚轮选择器可见数据项数量
-    visibleItemCount: React.PropTypes.number,
+    visibleItemCount: PropTypes.number,
 
-    itemSpace: React.PropTypes.number,
+    itemSpace: PropTypes.number,
 
-    onValueChange: React.PropTypes.func,
+    onValueChange: PropTypes.func,
 
-    selectedValue: React.PropTypes.any,
+    selectedValue: PropTypes.any,
 
   }
 
@@ -129,8 +131,8 @@ class WheelCurvedPicker extends Component{
 
 class Item extends Component {
   static propTypes = {
-    value: React.PropTypes.any, // string or integer basically
-    label: React.PropTypes.string,
+    value: PropTypes.any, // string or integer basically
+    label: PropTypes.string,
   }
   render () {
     // These items don't get rendered directly.
